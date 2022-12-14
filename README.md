@@ -1,6 +1,6 @@
 # Light_Transformer
 
-If you find this code useful for your research, please cite this paper in any publication:
+This file contains the code of the light transformer encoder of the paper "A light transformer for speech-to-intent applications". If you find this code useful for your research, please cite this paper in any publication:
 
 @inproceedings{wang2021light,  
   title={A light transformer for speech-to-intent applications},  
