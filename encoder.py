@@ -1,8 +1,6 @@
 import os
 import tensorflow as tf
 from tensorflow.contrib.training import HParams
-import layers
-import ops
 import numpy as np
 
 def encoder(self, features, seq_length, dim, dropo, is_training):
