@@ -49,7 +49,7 @@ def encoder(self, features, seq_length, dim, dropo, is_training):
           return _pos
       
       def dir_pos(sequence_len):
-          pos_ind = tf.range(0.0, -sequence_len,-1)
+          pos_ind = tf.range(0.0, -sequence_len, -1)
         
           def rpr_pos_out(num_t, p_ind):
               inv_freq = (2.0 * hp.pi * p_ind) / (num_t)
@@ -96,7 +96,8 @@ def encoder(self, features, seq_length, dim, dropo, is_training):
         
           return rpr_ret
     
-      def _create_mask(qlen, sel_time=25, mask_before=True, mask_after=True):
+      #if you want to get band-wise attention weight with band size 50
+        def _create_mask(qlen, sel_time=25, mask_before=True, mask_after=True):
           attn_mask = tf.ones([qlen, qlen])
           mask_u = tf.matrix_band_part(attn_mask, 0, -1)
           if mask_before:
